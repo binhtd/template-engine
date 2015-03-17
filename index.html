@@ -112,12 +112,76 @@ test muscle js template engine
         price:100 ,
         tax:0.05,
         totalPrice: function(){
-            return this.price * this.tax;
+            return this.price *(1+ this.tax);
         }
     };
     var tpl = "<p>Product name {{name}}</p><p>Price:{{totalPrice}}</p>";
     var html = Mustache.to_html(tpl, product);
     $("#sampleArea8").html(html);
+</script>
+<p>Sample 9</p>
+<p id="sampleArea9"></p>
+<script>
+    var data = {
+        employee :[
+            {
+                firstName:"le hong",
+                lastName:"minh",
+                fullTime:true,
+                phone:"343242343"
+            },
+            {
+                firstName:"tran cong",
+                lastName:"minh",
+                fullTime:false,
+                phone:"343242343"
+            },
+            {
+                firstName:"le hong",
+                lastName:"minh",
+                fullTime:true,
+                phone:"343242343"
+            }
+        ]
+    }
+    var tpl = "<p>{{#employee}}<ul><li>{{firstName}} {{lastName}} {{#fullTime}} {{phone}}{{/fullTime}}</li></ul>{{/employee}}</p>";
+    var html = Mustache.to_html(tpl, data);
+    $("#sampleArea9").html(html);
+</script>
+<p>Sample 10</p>
+<p id="sampleArea10"></p>
+<script>
+    var data = {
+        firstName: "Trinh",
+        lastName:"Binh",
+        address:"hanoi",
+        phone:"2342343"
+    }
+    var tpl = "<h1>{{firstName}} {{lastName}}</h1>{{>address}}";
+    var partials = {address: "<p>{{address}} {{phone}}"};
+    var html = Mustache.to_html(tpl, data, partials);
+    $("#sampleArea10").html(html);
+</script>
+
+<p>Sample 11</p>
+<p id="sampleArea11"></p>
+<script>
+    var data = { depts: [
+        {   name: "Engineering",
+            employees: [
+                {firstName: "Christophe", lastName: "Coenraets"},
+                {firstName: "John", lastName: "Smith"}]
+        },
+        {   name: "Sales",
+            employees: [
+                {firstName: "Paula", lastName: "Taylor"},
+                {firstName: "Lisa", lastName: "Jones"}]
+        }]
+    };
+    var tpl = "{{#depts}}<h1>{{name}}<ul>{{#employees}} {{>employee}} {{/employees}}</ul></h1>{{/depts}}";
+    var partials = {employee:"<li>{{firstName}} {{lastName}}</li>"};
+    var html = Mustache.to_html(tpl, data, partials);
+    $("#sampleArea11").html(html);
 </script>
 </body>
 </html>
