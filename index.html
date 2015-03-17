@@ -87,5 +87,37 @@ test muscle js template engine
     var html = Mustache.to_html(tpl, person);
     $("#sampleArea6").html(html);
 </script>
+
+<p>Sample 7</p>
+<p id="sampleArea7"></p>
+<script>
+    var person = {
+        firstName: "tran hong",
+        lastName:"anh",
+        manager:{
+            firstName:"tran",
+            lastName:"le anh"
+        }
+    };
+    var tpl = "<h1>{{firstName}} {{lastName}}</h1> {{#manager}}Manager:{{firstName}} {{lastName}}{{/manager}}";
+    var html = Mustache.to_html(tpl, person);
+    $("#sampleArea7").html(html);
+</script>
+
+<p>Sample 8</p>
+<p id="sampleArea8"></p>
+<script>
+    var product = {
+      name: "an apple",
+        price:100 ,
+        tax:0.05,
+        totalPrice: function(){
+            return this.price * this.tax;
+        }
+    };
+    var tpl = "<p>Product name {{name}}</p><p>Price:{{totalPrice}}</p>";
+    var html = Mustache.to_html(tpl, product);
+    $("#sampleArea8").html(html);
+</script>
 </body>
 </html>
