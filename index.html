@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>tempalte engine</title>
+    <script src="js/mustache.js"></script>
+    <script src="js/jquery.min.js"></script>
+</head>
+<body>
+test muscle js template engine
+<p>Sample 1</p>
+<p id="sampleArea"></p>
+<script>
+    var person = {
+      firstName: "Luka",
+      lastName: "ku",
+      blogUrl: "http://dantri.com.vn"
+    };
+
+    var template = "<h1>{{firstName}} {{lastName}}Blog: {{blogUrl}}</h1>";
+    var html = Mustache.to_html(template, person);
+    $("#sampleArea").html(html);
+</script>
+<p>Sample 2</p>
+<p id="sampleArea2"></p>
+<script>
+    $.getJSON("json/data.json", function (data) {
+        var template = "<h1>{{firstName}} {{lastName}}</h1>Blog:{{blogUrl}}";
+        var html = Mustache.to_html(template, data);
+        $("#sampleArea2").html(html);
+    });
+</script>
+<p>Sample3</p>
+<p id="sampleArea3"></p>
+<script id="personTpl" type="text/template">
+    <h1>{{firstName}} {{lastName}}</h1>
+    <p>Blog URL: <a href="{{blogURrl}}">{{blogUrl}}</a></p>
+</script>
+<script>
+    $.getJSON("json/data.json", function (data) {
+        var template = $("#personTpl").html();
+        var html = Mustache.to_html(template, data);
+        $("#sampleArea3").html(html);
+    })
+</script>
+
+<p>Sample 4</p>
+<p id="sampleArea4"></p>
+<script>
+    var data = {name: "John smith", skills:["js", "php", "perl"]};
+    var tpl = "{{name}} skills: {{#skills}}<li>{{.}}</li>{{/skills}}";
+    var html = Mustache.to_html(tpl, data);
+    $("#sampleArea4").html(html);
+</script>
+
+<p>Sample 5</p>
+<p id="sampleArea5"></p>
+<script>
+    var data = {
+        employees:[
+            {
+              "firstName":"le ma",
+              "lastName":"lan"
+            },
+            {
+                "firstName":"hong le",
+                "lastName":"minh"
+            }
+        ]
+    }
+    var tpl = "Employees: <ul>{{#employees}}<li>{{firstName}} {{lastName}}</li>{{/employees}}</ul>";
+    var html = Mustache.to_html(tpl, data);
+    $("#sampleArea5").html(html);
+</script>
+<p>Sample 6</p>
+<p id="sampleArea6"></p>
+<script>
+    var person = {
+        firstName: "le hong",
+        lastName:"anh",
+        manager:{
+            firstName:"tran",
+            lastName:"le anh"
+        }
+    };
+    var tpl = "<h1>{{firstName}} {{lastName}}</h1> Manager:{{manager.firstName}} {{manager.lastName}}";
+    var html = Mustache.to_html(tpl, person);
+    $("#sampleArea6").html(html);
+</script>
+</body>
+</html>
