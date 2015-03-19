@@ -1,0 +1,82 @@
+Order |original|result|explain|normalized
+1|0708806187|VALID|it's mobile phone number|+46708806187
+2|070-420 99 01|VALID|it's mobile phone number|+46704209901
+3|+46730521132|INVALID|invalid phone number format|
+4|070-972 32 32|VALID|it's mobile phone number|+46709723232
+5|46709480296|INVALID|invalid phone number format|
+6|073-0313337|VALID|it's mobile phone number|+46730313337
+7|070-49 65 808|VALID|it's mobile phone number|+46704965808
+8|0706 87 19 32|VALID|it's mobile phone number|+46706871932
+9|0705 - 607235|VALID|it's mobile phone number|+46705607235
+10|031151711|INVALID|invalid phone number format|
+11|0000000000|INVALID|invalid phone number format|
+12|0046703318174|INVALID|invalid phone number format|
+13|0720492403 / 040-228566|INVALID|invalid phone number format|
+14|+41791099035|INVALID|invalid phone number format|
+15|0032473372281|INVALID|invalid phone number format|
+16|0762300350|VALID|it's mobile phone number|+46762300350
+17|+4670-736 42 98|INVALID|invalid phone number format|
+18|+46-76-794 86 99|INVALID|invalid phone number format|
+19|0737-022476|VALID|it's mobile phone number|+46737022476
+20|076 791 92 24|VALID|it's mobile phone number|+46767919224
+21|+46 739 960725|INVALID|invalid phone number format|
+22|5551234567|INVALID|invalid phone number format|
+23|+46 706192202|INVALID|invalid phone number format|
+24|+4670 647 24 61|INVALID|invalid phone number format|
+25|+46 706192202|INVALID|invalid phone number format|
+26|jensaue@hotmail.com|INVALID|invalid phone number format|
+27|7713584113|INVALID|invalid phone number format|
+28|2154875421|INVALID|invalid phone number format|
+29|+4746630117|INVALID|invalid phone number format|
+30|+46 768723198|INVALID|invalid phone number format|
+31|2342343244|INVALID|invalid phone number format|
+32|5553454444|INVALID|invalid phone number format|
+33|234534534535|INVALID|invalid phone number format|
+34|345333455|INVALID|invalid phone number format|
+35|535345345|INVALID|invalid phone number format|
+36|3243242424|INVALID|invalid phone number format|
+37|2342342424|INVALID|invalid phone number format|
+38|4526227403|INVALID|invalid phone number format|
+39|6035010806|INVALID|invalid phone number format|
+40|5421548733|INVALID|invalid phone number format|
+41|215487542154|INVALID|invalid phone number format|
+42|112112112|INVALID|invalid phone number format|
+43|98734743723|INVALID|invalid phone number format|
+44|660822188449|INVALID|invalid phone number format|
+45|7667677788|INVALID|invalid phone number format|
+46|703224878|INVALID|invalid phone number format|
+47|351916495332|INVALID|invalid phone number format|
+48|919019872181|INVALID|invalid phone number format|
+49|katt123|INVALID|invalid phone number format|
+50|37057757529|INVALID|invalid phone number format|
+51|+14155428249|INVALID|invalid phone number format|
+52|kanokphan.nilsson22@gmail.com|INVALID|invalid phone number format|
+53|+32485388156|INVALID|invalid phone number format|
+54|121313323432|INVALID|invalid phone number format|
+55|639178169813|INVALID|invalid phone number format|
+56|95521779854|INVALID|invalid phone number format|
+57|44444444|INVALID|invalid phone number format|
+58|333333333|INVALID|invalid phone number format|
+59|200000000|INVALID|invalid phone number format|
+60|99876666|INVALID|invalid phone number format|
+61|91191074|INVALID|invalid phone number format|
+62|95410926|INVALID|invalid phone number format|
+63|777333333|INVALID|invalid phone number format|
+64|1676150797|INVALID|invalid phone number format|
+65|2356547658|INVALID|invalid phone number format|
+66|3226752802|INVALID|invalid phone number format|
+67|66623344545|INVALID|invalid phone number format|
+68|602606206226|INVALID|invalid phone number format|
+69|7777777777|INVALID|invalid phone number format|
+70|700000000|INVALID|invalid phone number format|
+71|602606206226|INVALID|invalid phone number format|
+72|3847370500|INVALID|invalid phone number format|
+73|8701619707|INVALID|invalid phone number format|
+74|65589192195|INVALID|invalid phone number format|
+75|95721544569|INVALID|invalid phone number format|
+76|71762336654|INVALID|invalid phone number format|
+77|+3547812381|INVALID|invalid phone number format|
+78|2404764671|INVALID|invalid phone number format|
+79|17508905900|INVALID|invalid phone number format|
+80|68876287532|INVALID|invalid phone number format|
+81|071|INVALID|invalid phone number format|
